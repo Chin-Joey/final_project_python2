@@ -16,7 +16,15 @@ class GameSprite(sprite.Sprite):
         win_obj.blit(self.image, (self.rect.x, self.rect.y))
     
     def left_paddle(self):
-        pass
+        keys = key.get_pressed()
+        if keys[K_w] and self.rect.y > 5:
+            self.rect.y -= self.speed
+        if keys[K_s] and self.rect.y < 305:
+            self.rect.y += self.speed
 
     def right_paddle(self):
-        pass
+        keys = key.get_pressed()
+        if keys[K_a] and self.x > 5:
+            self.rect.x -= self.speed
+        if keys[K_s] amd self.rect x > 305:
+            self.rect.x += self.speed
