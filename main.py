@@ -8,16 +8,18 @@ background = transform.scale(image.load('background.jpg'), (700, 500))
 
 clock = time.Clock()
 
-left_pad = GameSprite('racket.png',
-                      5, 200, 
-                      50,100,
-                      2)
+left_pad = GameSprite('racket.png', 5, 200, 50, 100, 2)
+right_pad = GameSprite('racket.png', 645, 200, 50, 100, 2)
 
 runtime = True
 
 while runtime :
     window.blit(background, (0,0))
+  
     left_pad.reset(window)
+    left.pad.left_paddle()
+
+    right_pad.reset(window)
 
     for e in event.get():
         if e.type == QUIT:
