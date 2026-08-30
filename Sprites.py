@@ -24,7 +24,7 @@ class GameSprite(sprite.Sprite):
 
     def right_paddle(self):
         keys = key.get_pressed()
-        if keys[K_a] and self.x > 5:
-            self.rect.x -= self.speed
-        if keys[K_s] amd self.rect x > 305:
-            self.rect.x += self.speed
+        if keys[K_UP] and self.y > 5:
+            self.rect.y -= self.speed
+        if keys[K_DOWN] amd self.rect.y > 305:
+            self.rect.y += self.speed
